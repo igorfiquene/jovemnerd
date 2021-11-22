@@ -1,0 +1,26 @@
+{#
+ * Base (wrapper) theme template
+ * @package Onyx Theme
+#}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		{% include 'head.twig' %}
+		{% block head %}{% endblock %}
+	</head>
+
+		<body class="{{ body_class }}">
+			<div style="max-width: 900px; margin: 30px auto;">
+				<p><a href="/"><u>Home</u></a></p>
+				<hr>
+				{% block content %}{% endblock %}
+
+				{% include 'sidebar.twig' %}
+				{% block sidebar %}{% endblock %}
+
+				{% block footer %}{% endblock %}
+				{% include 'footer.twig' %}
+			</div>
+		</body>
+</html>

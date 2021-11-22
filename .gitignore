@@ -26,7 +26,7 @@ htdocs/app/*
 !htdocs/app/plugins/index.php
 !htdocs/app/uploads/index.php
 !htdocs/app/themes/index.php
-# !htdocs/app/themes
+!htdocs/app/themes
 
 # Application Public (verify /themes folder option)
 # public/
@@ -36,7 +36,7 @@ public/app/*
 !public/app/plugins/index.php
 !public/app/uploads/index.php
 !public/app/themes/index.php
-# !public/app/themes
+!public/app/themes
 
 
 # Config files

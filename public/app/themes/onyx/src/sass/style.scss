@@ -1,0 +1,29 @@
+/*
+|--------------------------------------------------------------------------
+| ONYX FRAMEWORK
+|--------------------------------------------------------------------------
+*/
+
+// utils
+	@import "utils/fonts";
+	@import "utils/vars";
+	@import "utils/mixins";
+	@import "utils/reset";
+	@import "utils/helpers";
+
+// layout
+	@import "layouts/theme";
+	@import "layouts/header";
+	@import "layouts/post";
+	@import "layouts/footer";
+
+/*
+|--------------------------------------------------------------------------
+| COMPONENTS
+|--------------------------------------------------------------------------
+*/
+
+	// @import 'components/pagenavi';
+	// @import 'components/wp-blocks';
+	// @import 'components/google-search';
+	// @import 'components/comments';
