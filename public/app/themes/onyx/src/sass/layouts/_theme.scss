@@ -63,27 +63,19 @@ h6 { font-size: 12px; }
 |--------------------------------------------------------------------------
 */
 
-.container {
+.limit {
 	max-width: $site-width;
-	position: relative;
 	margin: auto;
-	@media #{$from-ptb} {
-		margin: 0 20px 0 20px;
-	}
-}
-.container-limit {
-	margin: 0 15px 0 15px;
-	@media #{$to-desk} {
-		margin: 0;
-	}
-}
-.container.container-limit {
-	margin: auto;
-	padding: 0 15px 0 15px;
-	@media #{$from-ptb} {
-		padding: 0 20px 0 20px;
-	}
+	padding: 0 12px;
 	@media #{$to-desk} {
 		padding: 0;
 	}
+}
+
+.svg.search,
+.svg.arrow  {
+
+	fill: $color-white;
+	width: 20px;
+	height: 20px;
 }

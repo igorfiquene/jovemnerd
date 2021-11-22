@@ -271,8 +271,8 @@ img {
 */
 :root {
   --site-with: 1140px;
-  --color1: #333;
-  --color2: #333;
+  --color1: #1e1e26;
+  --color2: #282830;
   --color3: #333;
   --color-bg: #FFF;
   --color-footer-bg: #F0F0F0;
@@ -344,43 +344,23 @@ h6 {
 | GRID
 |--------------------------------------------------------------------------
 */
-.container {
+.limit {
   max-width: 1140px;
-  position: relative;
   margin: auto;
-}
-
-@media only screen and (min-width: 767px) {
-  .container {
-    margin: 0 20px 0 20px;
-  }
-}
-
-.container-limit {
-  margin: 0 15px 0 15px;
+  padding: 0 12px;
 }
 
 @media only screen and (min-width: 1200px) {
-  .container-limit {
-    margin: 0;
-  }
-}
-
-.container.container-limit {
-  margin: auto;
-  padding: 0 15px 0 15px;
-}
-
-@media only screen and (min-width: 767px) {
-  .container.container-limit {
-    padding: 0 20px 0 20px;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .container.container-limit {
+  .limit {
     padding: 0;
   }
+}
+
+.svg.search,
+.svg.arrow {
+  fill: #fff;
+  width: 20px;
+  height: 20px;
 }
 
 /*
@@ -388,6 +368,48 @@ h6 {
 | HEADER STYLES
 |--------------------------------------------------------------------------
 */
+.header {
+  background-color: #1e1e26;
+  padding: 20px 0;
+}
+
+.header > .limit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__toggle {
+  position: relative;
+}
+
+.header__toggle .-close {
+  display: none;
+}
+
+.header__toggle:after {
+  content: '';
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #fff;
+}
+
+.header__search svg {
+  fill: #fff;
+  height: 20px;
+  width: 20px;
+}
+
+.header span {
+  color: #fff;
+}
+
 /* TO SMALL MOBILE <=320px */
 /* TO MOBILE <=767px */
 /* FROM MOBILE L >=540px */
@@ -415,3 +437,45 @@ h6 {
 | COMPONENTS
 |--------------------------------------------------------------------------
 */
+/*
+|--------------------------------------------------------------------------
+| MENU
+|--------------------------------------------------------------------------
+*/
+.header__menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #1e1e26;
+}
+
+.header__item > a {
+  padding: 20px 12px;
+  display: block;
+  color: #fff;
+  border-bottom: 1px solid #282830;
+}
+
+/*
+|--------------------------------------------------------------------------
+| SUB-MENU
+|--------------------------------------------------------------------------
+*/
+.header__submenu {
+  position: relative;
+}
+
+.header__submenu:after {
+  content: '';
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #fff;
+}

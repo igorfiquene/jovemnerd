@@ -1,0 +1,25 @@
+/*
+|--------------------------------------------------------------------------
+| MENU
+|--------------------------------------------------------------------------
+*/
+
+.header {
+	&__menu {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: $color1;
+	}
+
+	&__item {
+		> a {
+			padding: $pd-small 12px;
+			display: block;
+			color: $color-white;
+			border-bottom: 1px solid $color2;
+		}
+	}
+}

@@ -16,8 +16,8 @@ $to-desk: "only screen and (min-width: 1200px)";
 $site-width: 1140px;
 
 // Colors
-$color1: #333;
-$color2: #333;
+$color1: #1e1e26;
+$color2: #282830;
 $color3: #333;
 $color-bg: #FFF;
 $color-footer-bg: #F0F0F0;
@@ -28,6 +28,19 @@ $color-post-link: #333;
 $color-post-link-hover: #333;
 $color-post-border: #333;
 $color-post-elements: #333;
+$color-white: #fff;
+
+
+// Margin 
+
+$mb-small: 20px;
+$mb-medium: 40px;
+$mb-large: 60px;
+
+// Padding
+$pd-small: 20px;
+$pd-medium: 40px;
+$pd-large: 60px;
 
 // Fonts
 $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
