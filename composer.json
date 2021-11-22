@@ -1,0 +1,65 @@
+{
+		"name": "andremacola/wp-onyx-starter",
+		"description": "wp onyx boilerplate",
+		"type": "wordpress",
+		"authors": [{
+			"name": "Andre Macola",
+			"email": "andremacola@gmail.com"
+		}],
+		"scripts": {
+			"onyx:update": [
+				"composer update --prefer-dist"
+			],
+			"onyx:dump": [
+				"composer dump-autoload -o"
+			],
+			"onyx:install:wp": [
+				"wp core download --force --skip-content --allow-root",
+				"composer dump-autoload -o"
+			],
+			"onyx:install:theme": [
+				"git clone https://github.com/andremacola/onyx-theme ./public/app/themes/onyx",
+				"rm -rf ./public/app/themes/onyx/.git",
+				"composer install -d ./public/app/themes/onyx"
+			],
+			"onyx:require:plugins": [
+				"composer require wpackagist-plugin/autodescription dev-trunk",
+				"composer require andremacola/advanced-custom-fields-pro dev-master",
+				"composer require andremacola/admin-columns-pro dev-master",
+				"composer require andremacola/ac-addon-acf dev-master",
+				"composer require freshsystems/wp-permission-manager dev-master"
+			],
+			"onyx:backup": [
+				"wp db export --allow-root - | gzip > ./sql/$(wp config get DB_NAME --allow-root)-$(date +%Y-%m-%d-%H%M%S).sql.gz"
+			]
+		},
+		"repositories":[
+			{
+				"type":"composer",
+				"url":"https://wpackagist.org"
+			},
+			{
+				"type": "vcs",
+				"url": "https://github.com/andremacola/advanced-custom-fields-pro"
+			},
+			{
+				"type": "vcs",
+				"url": "https://github.com/andremacola/admin-columns-pro"
+			},
+			{
+				"type": "vcs",
+				"url": "https://github.com/andremacola/ac-addon-acf"
+			},
+			{
+				"type": "vcs",
+				"url": "https://github.com/andremacola/wp-permission-manager"
+			}
+		],
+		"extra": {
+			"installer-paths": {
+				"./public/app/plugins/{$name}/": ["type:wordpress-plugin"],
+				"./public/app/themes/{$name}/": ["type:wordpress-theme"]
+			}
+		},
+		"require": {}
+}

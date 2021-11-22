@@ -1,0 +1,47 @@
+# Development files/folders
+*.DS_Store
+*[Tt]humbs.db
+*.Trashes
+.codekit-cache
+.idea
+.dropbox
+desktop.ini
+local-phpinfo.php
+phpinfo.php
+node_modules/
+sql/
+.vscode/
+.ftpconfig
+sftp.json
+sftp-config.json
+
+# Composer
+vendor/
+
+# Application HTDOCS (verify /themes folder option)
+# htdocs
+htdocs/wp
+htdocs/.htaccess
+htdocs/app/*
+!htdocs/app/plugins/index.php
+!htdocs/app/uploads/index.php
+!htdocs/app/themes/index.php
+# !htdocs/app/themes
+
+# Application Public (verify /themes folder option)
+# public/
+public/wp
+public/.htaccess
+public/app/*
+!public/app/plugins/index.php
+!public/app/uploads/index.php
+!public/app/themes/index.php
+# !public/app/themes
+
+
+# Config files
+.env.php
+
+# Production files/folders
+conf/
+logs/
