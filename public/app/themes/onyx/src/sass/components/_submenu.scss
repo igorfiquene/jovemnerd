@@ -7,18 +7,28 @@
 .header {
 	&__submenu {
 		position: relative;
+		display: none;
+		
+		&--item {
+			> a {
+				padding: $pd-small 24px;
+				display: block;
+				color: $color-white;
+				border-bottom: 1px solid $color1;
+				background-color: $color2;
 
-		&:after {
-			content: '';
-			transform: translateY(-50%);
-			position: absolute;
-			top: 50%;
-			right: 12px;
-			width: 0; 
-			height: 0; 
-			border-left: 7px solid transparent;
-			border-right: 7px solid transparent;
-			border-top: 7px solid $color-white;
+				&::before {
+					content: '';
+					display: inline-block;
+					width: 6px;
+					height: 22px;
+					border-radius: 6px;
+					vertical-align: middle;
+					margin-top: -3px;
+					margin-right: 6px;
+					background-color: $color-white;
+				}
+			}
 		}
 	}
 }

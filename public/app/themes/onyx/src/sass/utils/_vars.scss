@@ -18,7 +18,7 @@ $site-width: 1140px;
 // Colors
 $color1: #1e1e26;
 $color2: #282830;
-$color3: #333;
+$color3: #3bb4b4;
 $color-bg: #FFF;
 $color-footer-bg: #F0F0F0;
 $color-link: #333;
@@ -29,6 +29,8 @@ $color-post-link-hover: #333;
 $color-post-border: #333;
 $color-post-elements: #333;
 $color-white: #fff;
+
+$color-active: #3bb4b4;
 
 
 // Margin 
@@ -45,3 +47,13 @@ $pd-large: 60px;
 // Fonts
 $font-family: 'Inter', sans-serif;
 $font-size: 100%;
+
+// Menu Header
+$menu-mb: 72px;
+$menu-desk: 85px;
+
+:root {
+	--jv-category-color: $color3;
+}
+
+
