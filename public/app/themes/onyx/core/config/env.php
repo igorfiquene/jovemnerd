@@ -17,7 +17,7 @@ return [
 	'url'     => get_home_url(),
 	'rest'    => 'api',
 	'user'    => wp_get_current_user()->user_email,
-	'devs'    => [ 'dev@domain.tld' ],
+	'devs'    => [ 'igorfpessoa@gmail.com' ],
 	'timber'  => [
 		'cache_dir' => WP_CONTENT_DIR . '/cache/timber',
 	],

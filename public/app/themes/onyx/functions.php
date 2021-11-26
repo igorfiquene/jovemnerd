@@ -24,6 +24,13 @@ require_once $autoload;
 |--------------------------------------------------------------------------
 */
 
+/*
+|--------------------------------------------------------------------------
+| Require Theme Functions
+|--------------------------------------------------------------------------
+*/
+
+require_once __DIR__ . '/core/includes/jovem-functions.php';
 require_once __DIR__ . '/core/includes/hooks-functions.php';
 
 /*

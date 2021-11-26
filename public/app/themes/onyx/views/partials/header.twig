@@ -11,25 +11,20 @@
 		</picture>
 
 		<ul class="header__menu">
-			<li class="header__item">
-				<a href="#">NerdCast</a>
-			</li>
-			<li class="header__item">
-				<a href="#">NerdCast</a>
-			</li>
-			<li class="header__item">
-				<a href="#">NerdCast</a>
-			</li>
-			<li class="header__item header__submenu">
-				<a href="#">NerdCast</a>
-			</li>
-			<li class="header__item">
-				<a href="#">NerdCast</a>
-			</li>
-			<li class="header__item">
-				<a href="#">NerdCast</a>
-			</li>
-		
+			{% for item in menu.items %}
+				<li class="{{ item.classes|join(' ') }} header__item">
+					<a href="{{ item.link }}" target="{{ item.target }}">{{ item.title }}</a>
+                {% if item.children %}
+                    <ul class="header__submenu">
+                        {% for child in item.children %}
+                            <li class="header__submenu--item">
+                                <a href="{{ child.link }}">{{ child.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+				</li>
+			{% endfor %}
 		</ul>
 
 		<button class="header__search">
@@ -37,6 +32,6 @@
 				<use xlink:href="{{ site.theme.uri }}/assets/images/sprite.svg#search"></use>
 			</svg>
 		</button>
-	</div>
 
+	</div>
 </header>
